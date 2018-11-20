@@ -4,17 +4,25 @@ import br.com.cruzeiro.ads.models.interfaces.IFigura2D;
 
 public class Quadrado extends Ponto implements IFigura2D {
 
-    public Quadrado(double x, double y) {
+    private double lado;
+
+    public Quadrado(double x, double y, double lado) {
         super(x, y);
+        this.lado = lado;
+    }
+
+    public Quadrado(double lado) {
+        super();
+        this.lado = lado;
     }
 
     @Override
     public double calculoArea() {
-        return 0;
+        return Math.pow(lado, 2);
     }
 
     @Override
     public double calculoPerimetro() {
-        return 0;
+        return lado * 4;
     }
 }
