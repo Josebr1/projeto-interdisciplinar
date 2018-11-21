@@ -14,7 +14,7 @@ public class QuadradoController {
     }
 
     public void init() {
-        model.setLado(view.setValueLado());
+        model.setLado(view.getValueLado());
     }
 
     public void updateView() {

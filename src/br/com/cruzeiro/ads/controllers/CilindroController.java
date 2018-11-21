@@ -13,8 +13,8 @@ public class CilindroController {
     }
 
     public void init() {
-        model.setRaio(view.setValueRaio());
-        model.setAltura(view.setValueAltura());
+        model.setRaio(view.getValueRaio());
+        model.setAltura(view.getValueAltura());
     }
 
     public void updateView() {

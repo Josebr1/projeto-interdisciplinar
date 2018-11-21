@@ -15,9 +15,9 @@ public class Equacao2GrauController {
 
     public void init() {
         view.init();
-        model.setA(view.setValueA());
-        model.setB(view.setValueB());
-        model.setC(view.setValueC());
+        model.setA(view.getValueA());
+        model.setB(view.getValueB());
+        model.setC(view.getValueC());
     }
 
     public void updateView() {

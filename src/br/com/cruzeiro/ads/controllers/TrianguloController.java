@@ -14,9 +14,9 @@ public class TrianguloController {
     }
 
     public void init() {
-        model.setAltura(view.setValueAltura());
-        model.setBase(view.setValueBase());
-        model.setLado(view.setValueLado());
+        model.setAltura(view.getValueAltura());
+        model.setBase(view.getValueBase());
+        model.setLado(view.getValueLado());
     }
 
     public void updateView() {

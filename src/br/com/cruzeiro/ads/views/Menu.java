@@ -12,9 +12,9 @@ public class Menu {
         Scanner in = new Scanner(System.in);
 
         for (; ; ) {
-            System.out.println("============================================================================");
-            System.out.println("                                  ******                                    ");
-            System.out.println("============================================================================");
+            System.out.println("====================================================================================================");
+            System.out.println("                                                ******                                              ");
+            System.out.println("====================================================================================================");
             System.out.println("\t\t\t** Cálculo da área total da figura e cálculo do perímetro **");
             System.out.println("\t\t1. Triângulo");
             System.out.println("\t\t2. Quadrado");
@@ -28,8 +28,9 @@ public class Menu {
             System.out.println("\t\t6. Equação de 2º grau");
             System.out.println("\t\t7. Sair");
 
+            System.out.println("====================================================================================================");
+            System.out.print("  [Opção do Usuário] -> ");
 
-            System.out.print("-> ");
             String digitado = in.nextLine();
             if (digitado.equals("7"))
                 break;
@@ -61,17 +62,18 @@ public class Menu {
                     cilindroController.updateView();
                     break;
                 case "6":
-                    System.out.print("Ola");
                     Equacao2GrauController equacao2Grau = new Equacao2GrauController(new Equacao2Grau(), new Equacao2GrauView());
                     equacao2Grau.init();
                     equacao2Grau.updateView();
                     break;
                 default:
+                    System.out.println("Opção inválida");
+                    Console.waitKey();
             }
 
             Console.clear();
 
-            System.out.println("============================================================================");
+            System.out.println("====================================================================================================");
         }
     }
 }

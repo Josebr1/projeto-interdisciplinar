@@ -14,9 +14,9 @@ public class ParalelepipedoController {
     }
 
     public void init() {
-        model.setComprimento(view.setValueComprimento());
-        model.setLargura(view.setValueLargura());
-        model.setAltura(view.setValueAltura());
+        model.setComprimento(view.getValueComprimento());
+        model.setLargura(view.getValueLargura());
+        model.setAltura(view.getValueAltura());
     }
 
     public void updateView() {

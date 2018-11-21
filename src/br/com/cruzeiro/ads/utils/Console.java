@@ -1,6 +1,7 @@
 package br.com.cruzeiro.ads.utils;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Console {
 
@@ -11,6 +12,11 @@ public class Console {
             else
                 Runtime.getRuntime().exec("clear");
         } catch (IOException | InterruptedException ex) {}
+    }
+
+    public static void waitKey() {
+        System.out.print("\nPressione qualquer tecla para continuar...");
+        new Scanner(System.in).nextLine();
     }
 
 }
