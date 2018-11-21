@@ -5,6 +5,8 @@ public class Equacao2Grau {
     private double b;
     private double c;
 
+    public Equacao2Grau() {}
+
     public Equacao2Grau(double a, double b, double c) {
         this.a = a;
         this.b = b;
@@ -33,5 +35,22 @@ public class Equacao2Grau {
 
     public void setC(double c) {
         this.c = c;
+    }
+
+
+    public double delta() {
+        return Math.pow(this.getB(), 2) - (4 * this.getA() * this.getC());
+    }
+
+    public double calcularX1() {
+        return (-(this.getB()) + Math.sqrt(delta())) / (2 * this.getA());
+    }
+
+    public double calcularX2() {
+        return (-(this.getB()) - Math.sqrt(delta())) / (2 * this.getA());
+    }
+
+    public boolean temRaizes() {
+        return delta() >= 0 ? true : false;
     }
 }

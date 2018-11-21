@@ -6,6 +6,8 @@ public class Quadrado extends Ponto implements IFigura2D {
 
     private double lado;
 
+    public Quadrado() {}
+
     public Quadrado(double x, double y, double lado) {
         super(x, y);
         this.lado = lado;
@@ -13,6 +15,14 @@ public class Quadrado extends Ponto implements IFigura2D {
 
     public Quadrado(double lado) {
         super();
+        this.lado = lado;
+    }
+
+    public double getLado() {
+        return lado;
+    }
+
+    public void setLado(double lado) {
         this.lado = lado;
     }
 

@@ -1,29 +1,26 @@
 package br.com.cruzeiro.ads.controllers;
 
 import br.com.cruzeiro.ads.models.Equacao2Grau;
+import br.com.cruzeiro.ads.views.Equacao2GrauView;
 
 public class Equacao2GrauController {
 
-    private Equacao2Grau mEquacao2Grau;
+    private Equacao2Grau model;
+    private Equacao2GrauView view;
 
-    public Equacao2GrauController(int a, int b, int c) {
-        mEquacao2Grau = new Equacao2Grau(a, b, c);
+    public Equacao2GrauController(Equacao2Grau model, Equacao2GrauView view){
+        this.model = model;
+        this.view = view;
     }
 
-    public double delta() {
-        return Math.pow(mEquacao2Grau.getB(), 2) - (4 * mEquacao2Grau.getA() * mEquacao2Grau.getC());
+    public void init() {
+        view.init();
+        model.setA(view.setValueA());
+        model.setB(view.setValueB());
+        model.setC(view.setValueC());
     }
 
-    public double calcularX1() {
-        return (-(mEquacao2Grau.getB()) + Math.sqrt(delta())) / (2 * mEquacao2Grau.getA());
+    public void updateView() {
+        view.result(model.delta(), model.temRaizes(), model.calcularX1(), model.calcularX2());
     }
-
-    public double calcularX2() {
-        return (-(mEquacao2Grau.getB()) - Math.sqrt(delta())) / (2 * mEquacao2Grau.getA());
-    }
-
-    public boolean temRaizes() {
-        return delta() >= 0 ? true : false;
-    }
-
 }
