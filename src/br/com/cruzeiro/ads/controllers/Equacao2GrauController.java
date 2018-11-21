@@ -13,14 +13,19 @@ public class Equacao2GrauController {
         this.view = view;
     }
 
-    public void init() {
+    private void init() {
         view.init();
         model.setA(view.getValueA());
         model.setB(view.getValueB());
         model.setC(view.getValueC());
     }
 
-    public void updateView() {
+    private void updateView() {
         view.result(model.delta(), model.temRaizes(), model.calcularX1(), model.calcularX2());
+    }
+
+    public void exec() {
+        init();
+        updateView();
     }
 }

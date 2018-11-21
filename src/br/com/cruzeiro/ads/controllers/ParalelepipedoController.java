@@ -13,13 +13,18 @@ public class ParalelepipedoController {
         this.view = view;
     }
 
-    public void init() {
+    private void init() {
         model.setComprimento(view.getValueComprimento());
         model.setLargura(view.getValueLargura());
         model.setAltura(view.getValueAltura());
     }
 
-    public void updateView() {
+    private void updateView() {
         view.result(model.calculoVolume());
+    }
+
+    public void exec() {
+        init();
+        updateView();
     }
 }

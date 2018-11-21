@@ -37,34 +37,22 @@ public class Menu {
 
             switch (digitado) {
                 case "1":
-                    TrianguloController trianguloController = new TrianguloController(new Triangulo(), new TrianguloView());
-                    trianguloController.init();
-                    trianguloController.updateView();
+                    new TrianguloController(new Triangulo(), new TrianguloView()).exec();
                     break;
                 case "2":
-                    QuadradoController quadradoController = new QuadradoController(new Quadrado(), new QuadradoView());
-                    quadradoController.init();
-                    quadradoController.updateView();
+                    new QuadradoController(new Quadrado(), new QuadradoView()).exec();
                     break;
                 case "3":
-                    ConeController coneController = new ConeController(new Cone(), new ConeView());
-                    coneController.init();
-                    coneController.updateView();
+                    new ConeController(new Cone(), new ConeView()).exec();
                     break;
                 case "4":
-                    ParalelepipedoController paralelepipedoController = new ParalelepipedoController(new Paralelepipedo(), new ParalelepipedoView());
-                    paralelepipedoController.init();
-                    paralelepipedoController.updateView();
+                    new ParalelepipedoController(new Paralelepipedo(), new ParalelepipedoView()).exec();
                     break;
                 case "5":
-                    CilindroController cilindroController = new CilindroController(new Cilindro(), new CilindroView());
-                    cilindroController.init();
-                    cilindroController.updateView();
+                    new CilindroController(new Cilindro(), new CilindroView()).exec();
                     break;
                 case "6":
-                    Equacao2GrauController equacao2Grau = new Equacao2GrauController(new Equacao2Grau(), new Equacao2GrauView());
-                    equacao2Grau.init();
-                    equacao2Grau.updateView();
+                    new Equacao2GrauController(new Equacao2Grau(), new Equacao2GrauView()).exec();
                     break;
                 default:
                     System.out.println("Opção inválida");

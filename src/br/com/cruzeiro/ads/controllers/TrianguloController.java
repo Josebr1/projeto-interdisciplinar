@@ -13,13 +13,18 @@ public class TrianguloController {
         this.view = view;
     }
 
-    public void init() {
+    private void init() {
         model.setAltura(view.getValueAltura());
         model.setBase(view.getValueBase());
         model.setLado(view.getValueLado());
     }
 
-    public void updateView() {
+    private void updateView() {
         view.result(model.calculoArea(), model.calculoPerimetro());
+    }
+
+    public void exec() {
+        init();
+        updateView();
     }
 }

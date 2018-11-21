@@ -13,11 +13,16 @@ public class QuadradoController {
         this.view = view;
     }
 
-    public void init() {
+    private void init() {
         model.setLado(view.getValueLado());
     }
 
-    public void updateView() {
+    private void updateView() {
         view.result(model.calculoArea(), model.calculoPerimetro());
+    }
+
+    public void exec() {
+        init();
+        updateView();
     }
 }
